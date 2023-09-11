@@ -1,0 +1,421 @@
+$---main-blue-color: #0052ea
+$---white-color: #fff
+$---heading-black: #1e2022
+$---heading-blue: #0052ea
+$---content-font-color: #77838f
+$---btn-round-more: 30px
+$---btn-round-less: 5px
+$---btn-padding: 0.8rem 1rem
+$---rounded-element: 5px
+$---subtitle-bg-color: rgba(55,125,255,.1)
+$---hover-color: #f8fafd
+$---border-type: 1px solid #e7eaf3
+$---submenu-color-before-hover: rgba(255,255,255,.7)
+$---padding-main: 2vh 5vw 2vh 7vw
+$---line-height-content: 1.7
+
+body
+  font-family: 'Lato', sans-serif
+  color: $---content-font-color
+
+h1,h2,h3,h4,h5
+  color: $---heading-black
+
+h1
+  font-size: 40px
+  font-weight: 700
+  margin: 2rem 0
+h2
+  font-size: 32px
+h3
+  font-size: 28px
+  font-weight: 700
+h4
+  font-size: 24px
+h5
+  font-size: inherit
+
+.content
+  font-size: 20px
+  line-height: $---line-height-content
+  margin: 1rem 0
+
+.containerPadding
+  padding: $---padding-main
+  margin: 10vh 0
+  @media screen and (max-width: 720px)
+    margin: 2vh 0
+
+
+.container
+  display: flex
+  justify-content: space-between
+  padding: $---padding-main
+  padding-top: 0
+  @media screen and (max-width: 720px)
+    display: flex
+    flex-direction: column
+  .main
+    margin-top: 150px
+    max-width: 45vw
+    @media screen and (max-width: 720px)
+      max-width: 100%
+  .button
+      width: 100px
+      color: $---white-color
+      background-color: $---main-blue-color
+      padding: $---btn-padding
+      border-radius: $---btn-round-more
+      &:hover
+        transition: all 0.2s ease-in-out
+        transform: translate(0, -4px)
+        box-shadow: 0px 0px 12px -2px #686868
+      span
+        font-size: 15px
+        padding-left: 5px
+  .mainImage
+    max-width: 40vw
+    max-height: auto
+    object-fit: scale-down
+    @media screen and (max-width: 720px)
+      max-width: 100%
+
+
+.subtitleButton
+  font-size: 12px
+  color: $---main-blue-color
+  background-color: $---subtitle-bg-color
+  border-radius: $---btn-round-more
+  padding: $---btn-padding
+  margin-bottom: 3rem
+
+.heading
+  display: block
+  text-align: center
+  margin: 4rem 0 3rem 0 
+  h2
+    margin: 1rem
+
+.cardsWrapper 
+  display: grid 
+  grid-template-columns: repeat(3, 2fr)
+  grid-row-gap: 15px 
+  grid-column-gap: 15px 
+  @media screen and (max-width: 1050px)
+    grid-template-columns: 1fr
+.icon
+    width: 80px
+.howNamingBox
+  display: flex
+  justify-content: space-between
+  @media screen and (max-width: 1050px)
+    flex-direction: column
+  .mainImage
+    width: auto
+    max-height: 80vh
+    @media screen and (max-width: 1050px)
+      width: 50vw
+      height: auto
+      margin: auto
+.list
+  padding-left: 3rem    
+  .listItem
+    position: relative
+    padding: 5%
+    display: flex
+    align-items: center
+    border: $---border-type
+    margin: 1rem
+    span
+      font-size: 50px
+      color: $---main-blue-color
+      padding-right: 10px
+
+
+
+.listItem::before 
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: -3rem
+  width: 2rem
+  height: 0.0625rem
+  border-top: $---border-type
+  margin: auto auto auto 0
+  content: ""
+
+
+.listItem::after
+  position: absolute
+  top: -20px
+  bottom: 0
+  right: -100
+  left: -3rem
+  height: 120%
+  border-right: $---border-type
+  margin-top: 5rem
+  content: ""
+
+.listItem:last-child::after
+  position: absolute
+  border-right: none
+  content: ""
+
+.grid
+  display: grid
+  grid-template-columns: repeat(3, 2fr)
+  grid-row-gap: 15px 
+  grid-column-gap: 15px 
+  padding-top: 4rem
+.faq
+  grid-column: 2/4
+  @media screen and (max-width: 720px)
+    grid-column: 1/4
+  .faqBox:not(.faqBox:first-child)
+    padding-top: 2rem
+    border-top: $---border-type
+    h3
+      color: $---main-blue-color
+    
+   
+.navigate
+  @media screen and (max-width: 720px)
+    grid-column: 1/4
+  .navigateBox
+    padding: 7%
+    margin: 0 7%
+    background-color: $---main-blue-color
+    border-radius: $---rounded-element
+    @media screen and (max-width: 720px)
+      margin: 7% 0
+    li
+      padding: 5%
+      color: $---submenu-color-before-hover
+      a
+        text-decoration: none
+        color: inherit
+    li:hover
+      color: $---white-color
+
+.blueCallToAction
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background-image: linear-gradient(150deg,#2d1582 0%,#19a0ff 100%)
+  padding: 5%
+  position: relative
+  overflow: hidden
+  h2
+    color: #00dffc
+    font-weight: 600
+    z-index: 1
+    text-align: center
+  p
+    color: $---white-color
+    text-align: center
+    padding: 1rem 6rem
+    margin: 0
+    z-index: 1
+    @media screen and (max-width: 500px)
+      padding: 1rem
+  .button
+    color: $---main-blue-color
+    background-color: $---white-color
+    padding: $---btn-padding
+    border-radius: $---btn-round-less
+    border: none
+    text-decoration: none
+    &:hover
+      transition: all 0.2s ease-in-out
+      transform: translate(0, -4px)
+      box-shadow: 0px 0px 12px -2px $---white-color
+  .leafImgRight
+    position: absolute
+    right: 0
+    bottom: 0
+    height: 80%
+    opacity: 50%
+    @media screen and (max-width: 720px)
+      right: -25%
+    @media screen and (max-width: 500px)
+      right: -45%
+      bottom: -20%
+  .leafImgLeft
+    position: absolute
+    left: 0
+    top: 0
+    height: 80%
+    opacity: 50%
+    @media screen and (max-width: 720px)
+      left: -25%
+    @media screen and (max-width: 500px)
+      left: -55%
+
+
+.containerDignity
+  display: grid
+  grid-template-columns: repeat(3, 2fr)
+  grid-column-gap: 2rem 
+  .boxDignity
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 20px
+    position: relative
+    p
+      text-align: center
+    img
+      width: 50px
+      height: 50px
+    &::after
+      content: ''
+      height: 5rem
+      border-right: $---border-type
+      position: absolute
+      left: 95%
+      top: 30%
+      transform: rotate(15deg)
+      @media screen and (max-width: 850px)
+        display: none
+    &:last-child::after
+      content: none
+    @media screen and (max-width: 850px)
+      grid-column: 1/4
+      p
+        width: 60%
+
+
+.contactsBlock
+  display: grid 
+  grid-template-columns: repeat(8, 1fr)
+  @media screen and (max-width: 720px)
+    grid-template-columns: 1fr
+
+
+.leftSection
+  min-height: 450px
+  grid-column: 1/5
+  padding: 1rem 2rem
+  border-radius: $---rounded-element
+  box-shadow: 0px 0px 12px -4px $---content-font-color
+
+  @media screen and (max-width: 850px)
+    grid-column: 1/9
+  .questionText
+    display: flex
+    margin-top: 3rem
+
+    &:first-of-type
+      border-bottom: 1px solid #dee2e6
+      padding-bottom: 3%
+    div   
+      margin-left: 4rem
+      a
+        text-decoration: none
+        color: $---main-blue-color
+
+    span
+      position: absolute
+      width: 25px
+      height: 25px
+      padding: 0.5rem
+      background-color: $---subtitle-bg-color
+      color: $---main-blue-color
+      border-radius: 50%
+      i
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        
+
+.rightSection
+  grid-column: 5/9
+  margin: 1rem 0
+  min-height: 350px
+  padding: 4rem
+  background-color: $---main-blue-color
+  color: $---white-color
+  display: flex
+  flex-direction: column
+  justify-content: center
+  @media screen and (max-width: 850px)
+    grid-column: 1/9
+    margin: 0
+  .headerContacts
+    color: $---white-color
+    font-weight: 600
+    margin-bottom: 2rem
+  a
+    text-decoration: none
+    color: inherit
+    img
+      padding-right: 5px
+  button
+    width: 60%
+    height: 50px
+    border-radius: 30px
+    border: none 
+    background-color: $---white-color
+    color: $---main-blue-color
+    font-size: 20px
+    margin-bottom: 3rem
+    &:hover
+      transition: all 0.2s ease-in-out
+      transform: translate(0, -4px)
+
+
+// .brands
+//   display: flex    
+//   @media screen and (max-width: 850px)
+//     flex-direction: column
+//   .headingBrands
+//     padding-top: 3rem
+//     width: 30%
+//     @media screen and (max-width: 850px)
+//       padding-bottom: 1rem
+//   .brandsItems
+//     border-top: $---border-type
+//     padding-top: 3rem
+//     display: flex
+//     justify-content: space-evenly
+//     a
+//       padding: 1rem 0
+//       @media screen and (max-width: 850px)
+//         width: 200px
+//     img
+//       height: 100%
+//     @media screen and (max-width: 850px)
+//       flex-wrap: wrap
+
+.brands
+  display: flex    
+  @media screen and (max-width: 850px)
+    flex-direction: column
+  .headingBrands
+    padding-top: 3rem
+    width: 30%
+    @media screen and (max-width: 850px)
+      padding-bottom: 1rem
+  .brandsItems
+    border-top: $---border-type
+    padding-top: 3rem
+    width: 100%
+    display: flex
+    justify-content: space-evenly
+    flex-wrap: wrap
+    a
+      padding: 1rem 0
+      @media screen and (max-width: 850px)
+        width: 200px
+      @media screen and (max-width: 700px)
+        width: 100%
+    @media screen and (max-width: 850px)
+      justify-content: center
+    @media screen and (max-width: 470px)
+      justify-content: left
+    img
+      height: 100%
